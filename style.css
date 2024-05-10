@@ -2,18 +2,28 @@ body {
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
-    background-color: #f5f5f0
+    background-color: #373738
 }
 
-div {
+div.init-container {
+    background-color: #eff0f8;
     margin: auto;
     display: flex;
     align-self: center;
     justify-content: center;
-    background-color: #606168;
+    width: fit-content;
+    padding: 0;
+}
+
+div.table-container {
+    margin: auto;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    background-color: #5F626B;
     width: fit-content;
     padding: 1.2rem;
-    border-radius: 24px;
+    border-radius: 30px;
 }
 
 table, th, td {
@@ -21,7 +31,7 @@ table, th, td {
 }
 
 th div{
-    width: 50%;
+    width: 30%;
 }
 
 th div input {
@@ -29,6 +39,7 @@ th div input {
     font-weight: 600;
     text-align: right;
     padding: 7%;
+    line-height: 40px;
     border-radius: 12px;
     background-color: #eff0f8;
 }
