@@ -71,10 +71,10 @@ plus.addEventListener('click', () => {
             case '-':
                 result = nums[0] - nums[2];
                 break;
-            case '*':
+            case '×':
                 result = nums[0] * nums[2];
                 break
-            case '/':
+            case '÷':
                 result = nums[0] / nums[2];
                 break
             default: result;
@@ -97,10 +97,10 @@ minus.addEventListener('click', () => {
             case '-':
                 result = nums[0] - nums[2];
                 break;
-            case '*':
+            case '×':
                 result = nums[0] * nums[2];
                 break
-            case '/':
+            case '÷':
                 result = nums[0] / nums[2];
                 break
             default: result;
@@ -123,10 +123,10 @@ times.addEventListener('click', () => {
             case '-':
                 result = nums[0] - nums[2];
                 break;
-            case '*':
+            case '×':
                 result = nums[0] * nums[2];
                 break
-            case '/':
+            case '÷':
                 result = nums[0] / nums[2];
                 break
             default: result;
@@ -149,10 +149,10 @@ over.addEventListener('click', () => {
             case '-':
                 result = nums[0] - nums[2];
                 break;
-            case '*':
+            case '×':
                 result = nums[0] * nums[2];
                 break
-            case '/':
+            case '÷':
                 result = nums[0] / nums[2];
                 break
             default: result;
@@ -172,10 +172,10 @@ equalTo.addEventListener('click', () => {
         case '-':
             result = nums[0] - nums[2];
             break;
-        case '*':
+        case '×':
             result = nums[0] * nums[2];
             break
-        case '/':
+        case '÷':
             result = nums[0] / nums[2];
             break
         default: result;
