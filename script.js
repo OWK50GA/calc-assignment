@@ -15,21 +15,29 @@ let num9 = document.querySelector('#num9');
 let decimal = document.querySelector('#point');
 let equalToPressed = false;
 
-output.innerHTML = '0'
+output.value = 0
 
 let concat = function(input){
-    if (output.value.length < 13) {
-        if (output.value == 0 && output.value.length < 2) {
-            output.value = input;
-        }
-        else if (equalToPressed == true) {
-            output.value = input;
-            equalToPressed = false;
-        }
-        else {
-            output.value = output.value + input;
-        }
+    // if (output.value.length < 13) {
+    if (output.value == 0 && output.value.length < 2) {
+        output.value = input;
+        equalToPressed = false;
+        // result = output.value;
+        // result = output.value;
     }
+
+    else if (equalToPressed == true) {
+        output.value = input;
+        equalToPressed = false
+        result = output.value;
+    }
+
+    else {
+        equalToPressed = false
+        output.value = output.value + input;
+        result = output.value;
+    }
+    // }
 }
 
 num0.addEventListener("click", () => concat(num0.innerHTML));
@@ -55,8 +63,8 @@ let over  = document.querySelector('#over');
 let equalTo = document.querySelector('#equalTo');
 
 let nums = [];
-let result;
-let intResult;
+let result = null;
+// let intResult;
 
 plus.addEventListener('click', () => {
     nums.push(parseFloat(output.value));
@@ -182,7 +190,18 @@ equalTo.addEventListener('click', () => {
     }
     console.log(result);
     nums = [];
+    
+    // let decimalSplitting = `${result}`.split('.')
+    // let wholeNumLen = decimalSplitting[0].length;
+    // console.log(wholeNumLen);
+
+    let noOfDigits = `${result}`.length;
+    if (noOfDigits >= 14) {
+        result = result.toPrecision(13);
+    }
+
     output.value = result;
     console.log(nums);
     equalToPressed = true;
+    result = 0;
 })
