@@ -1,6 +1,7 @@
+// verifying that yoiu've grabbed the document element
 document.querySelector('#display-panel').value = '0'
-// document.getElementById('display-panel').innerText = 'Hello, ladies'
 
+// Grabbing the buttons for the numbers and decimal points
 let output = document.querySelector('#display-panel');
 let num0 = document.querySelector('#num0');
 let num1 = document.querySelector('#num1');
@@ -13,17 +14,12 @@ let num7 = document.querySelector('#num7');
 let num8 = document.querySelector('#num8');
 let num9 = document.querySelector('#num9');
 let decimal = document.querySelector('#point');
-let equalToPressed = false;
 
-output.value = 0
-
+// Writing the concat function to update the display, and add as callback to the eventlisteners of each button you grabbed
 let concat = function(input){
-    // if (output.value.length < 13) {
     if (output.value == 0 && output.value.length < 2) {
         output.value = input;
         equalToPressed = false;
-        // result = output.value;
-        // result = output.value;
     }
 
     else if (equalToPressed == true) {
@@ -40,6 +36,7 @@ let concat = function(input){
     // }
 }
 
+// Add the concat function as callback to each of the event listeners.
 num0.addEventListener("click", () => concat(num0.innerHTML));
 num1.addEventListener("click", () => concat(num1.innerHTML));
 num2.addEventListener("click", () => concat(num2.innerHTML));
@@ -56,16 +53,20 @@ decimal.addEventListener("click", () => {
     }
 });
 
+// Grabbing the operator buttons
 let plus = document.querySelector('#plus');
 let minus = document.querySelector('#minus');
 let times = document.querySelector('#times');
 let over  = document.querySelector('#over');
 let equalTo = document.querySelector('#equalTo');
 
+// declaring some important variables that will be updated by the loops and algorithms for each button, based on user input
 let nums = [];
 let result = null;
-// let intResult;
+let equalToPressed = false;
+output.value = 0
 
+// Writing the event listeners for each of the operator buttons
 plus.addEventListener('click', () => {
     nums.push(parseFloat(output.value));
     nums.push(plus.innerHTML);
@@ -190,10 +191,6 @@ equalTo.addEventListener('click', () => {
     }
     console.log(result);
     nums = [];
-    
-    // let decimalSplitting = `${result}`.split('.')
-    // let wholeNumLen = decimalSplitting[0].length;
-    // console.log(wholeNumLen);
 
     let noOfDigits = `${result}`.length;
     if (noOfDigits >= 14) {
