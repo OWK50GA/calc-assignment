@@ -1,3 +1,5 @@
+@import url('https://fonts.cdnfonts.com/css/digital-7-mono');
+
 body {
     margin: 0%;
     padding: 0%;
@@ -31,17 +33,19 @@ table, th, td {
 }
 
 th div{
-    width: 30%;
+    width: fit-content;
 }
 
 th div input {
-    font-size: 32px;
+    font-size: 40px;
     font-weight: 600;
+    font-family: 'Digital-7', sans-serif;
     text-align: right;
     padding: 7%;
     line-height: 40px;
     border-radius: 12px;
     background-color: #eff0f8;
+    width: 100%;
 }
 
 button {
@@ -54,4 +58,29 @@ button {
 
 .orange-button {
     background-color: orange;
+}
+
+button:active {
+    background-color: blue;
+}
+
+div.code-repo {
+    background-color: orange;
+    padding: 0.8em;
+    margin: 30px auto;
+    display: flex;
+    line-height: 20px;
+    align-self: center;
+    justify-content: center;
+    width: fit-content;
+    border-radius: 3px;
+}
+
+div.code-repo a {
+    text-decoration: none;
+    color: #eff0f8;
+}
+
+div.code-repo a:hover {
+    color: blue;
 }
